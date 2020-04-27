@@ -8,4 +8,4 @@ jobs:
           name: GET apidoc
           command: |
             curl --location --request GET 'http://celeste.patch.com/api_v1/patch_apidoc/yaml' > ~/celeste.yaml
-            curl --location --request POST 'https://api.swaggerhub.com/apis/DanielaKirsch/https-celeste_patch_com_api?isPrivate=true&oas=3.0.0&force=false' --header 'Content-Type: application/yaml' --header 'Authorization: $swaggerkey' --data-binary "~/celeste.yaml"
+            curl --location --request POST 'https://api.swaggerhub.com/apis/DanielaKirsch/https-celeste_patch_com_api?isPrivate=true&oas=3.0.0&force=false' --header 'Content-Type: application/yaml' --header $swaggerkey --data-binary '~/celeste.yaml'
