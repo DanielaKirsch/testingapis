@@ -1,6 +1,8 @@
 version: 2.1
 jobs:
   build:
+    docker:
+      - image: quay.io/pantheon-public/build-tools-ci:4.x
     steps: 
       - run: 
           name: GET apidoc
